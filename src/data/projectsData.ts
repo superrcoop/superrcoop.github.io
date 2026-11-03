@@ -21,7 +21,7 @@ export const projectsData: ProjectItem[] = [
     liveUrl: "https://playrepyt.vercel.app/",
     githubUrl: "https://github.com/superrcoop/repyt",
     col1Image1: "/repyt-mobile.png",
-    col1Image2: "/repyt-preview.png",
+    col1Image2: "/repyt-voyage-card.png",
     col2Image: "/repyt-preview.png",
   },
   {
@@ -33,7 +33,7 @@ export const projectsData: ProjectItem[] = [
     liveUrl: "https://github.com/superrcoop/pixel-run-game",
     githubUrl: "https://github.com/superrcoop/pixel-run-game",
     col1Image1: "/pixel-runner-gameplay.png",
-    col1Image2: "/pixel-runner-menu.png",
+    col1Image2: "/pixel-runner-action.png",
     col2Image: "/pixel-runner-menu.png",
   },
   {
@@ -44,8 +44,8 @@ export const projectsData: ProjectItem[] = [
     description: "Personal systems portfolio, 3D model showcase, research archives, and sound system blueprints for Lead Cloud & Distributed Systems Architect.",
     liveUrl: "https://superrcoop.net",
     githubUrl: "https://superrcoop.net",
-    col1Image1: "/superrcoop-net-preview.png",
-    col1Image2: "/superrcoop-gallery.png",
+    col1Image1: "/superrcoop-journal.png",
+    col1Image2: "/superrcoop-resume.png",
     col2Image: "/superrcoop-gallery.png",
   },
 ];
