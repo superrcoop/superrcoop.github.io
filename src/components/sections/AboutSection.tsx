@@ -1,7 +1,6 @@
 import React from 'react';
 import { FadeIn } from '../common/FadeIn';
 import { AnimatedText } from '../common/AnimatedText';
-import { ContactButton } from '../common/ContactButton';
 
 export const AboutSection: React.FC = () => {
   const bioText = "With more than five years of experience in design and engineering, I focus on distributed systems, cloud architecture, and modern user experiences. I truly enjoy working with teams and businesses that aim to stand out and present their best image. Let's build something incredible together!";
@@ -83,13 +82,7 @@ export const AboutSection: React.FC = () => {
           />
         </div>
 
-        {/* Spacing between text block and button */}
-        <div className="h-14 sm:h-18 md:h-20 w-full" />
-
-        {/* Contact button */}
-        <FadeIn delay={0.2} y={20}>
-          <ContactButton href="mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop" />
-        </FadeIn>
+        {/* End of About content */}
       </div>
     </section>
   );

@@ -76,42 +76,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, totalCards })
           </div>
         </div>
 
-        {/* Bottom Row: Two-Column Image Grid (40% left, 60% right) */}
-        <div className="pt-6 grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-stretch">
-          {/* Left Column (40% / 5 cols): 2 stacked images */}
-          <div className="md:col-span-5 flex flex-col gap-4 sm:gap-6 justify-between">
-            <div
-              className="w-full rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden bg-[#181818] border border-white/10 shadow-lg group"
-              style={{ height: 'clamp(140px, 17vw, 240px)' }}
-            >
-              <img
-                src={project.col1Image1}
-                alt={`${project.name} Screenshot 1`}
-                loading="lazy"
-                className="w-full h-full object-cover object-top rounded-[30px] sm:rounded-[40px] md:rounded-[50px] transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-            <div
-              className="w-full rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden bg-[#181818] border border-white/10 shadow-lg group"
-              style={{ height: 'clamp(160px, 21vw, 320px)' }}
-            >
-              <img
-                src={project.col1Image2}
-                alt={`${project.name} Screenshot 2`}
-                loading="lazy"
-                className="w-full h-full object-cover object-center rounded-[30px] sm:rounded-[40px] md:rounded-[50px] transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          </div>
-
-          {/* Right Column (60% / 7 cols): 1 tall image */}
-          <div className="md:col-span-7 h-full min-h-[300px] md:min-h-[460px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden bg-[#181818] border border-white/10 shadow-lg group">
+        {/* Bottom: Single Showcase Frame (Collage of Screens) */}
+        <div className="pt-6 w-full flex-1">
+          <div className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[500px] rounded-[24px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#141414] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group relative">
             <img
-              src={project.col2Image}
-              alt={`${project.name} Main UI Preview`}
-              loading="lazy"
-              className="w-full h-full object-cover object-top rounded-[30px] sm:rounded-[40px] md:rounded-[50px] transition-transform duration-700 group-hover:scale-105"
+              src={project.image}
+              alt={`${project.name} Showcase Collage`}
+              className="w-full h-full object-cover object-center rounded-[24px] sm:rounded-[36px] md:rounded-[44px] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
+            <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-[24px] sm:rounded-[36px] md:rounded-[44px]" />
           </div>
         </div>
       </motion.div>
