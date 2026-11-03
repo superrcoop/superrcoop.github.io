@@ -18,7 +18,7 @@ const AnimatedChar: React.FC<CharProps> = ({ char, progress, range }) => {
 
   return (
     <span className="relative inline-block">
-      <span className="opacity-0">{char}</span>
+      <span className="opacity-0 select-none">{char}</span>
       <motion.span
         style={{ opacity }}
         className="absolute left-0 top-0 text-[#D7E2EA]"
@@ -33,24 +33,38 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = ''
   const containerRef = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 0.8', 'end 0.2'],
+    offset: ['start 0.85', 'end 0.25'],
   });
 
-  const characters = text.split('');
-  const total = characters.length;
+  const words = text.split(' ');
+  const totalChars = text.length;
+  let charCounter = 0;
 
   return (
     <p ref={containerRef} className={className} style={style}>
-      {characters.map((char, index) => {
-        const start = index / total;
-        const end = Math.min(start + 1 / total, 1);
+      {words.map((word, wordIndex) => {
+        const wordChars = word.split('');
         return (
-          <AnimatedChar
-            key={index}
-            char={char}
-            progress={scrollYProgress}
-            range={[start, end]}
-          />
+          <React.Fragment key={wordIndex}>
+            <span className="inline-block whitespace-nowrap">
+              {wordChars.map((char, charIdx) => {
+                const currentIdx = charCounter++;
+                const start = currentIdx / totalChars;
+                const end = Math.min(start + 1 / totalChars, 1);
+                return (
+                  <AnimatedChar
+                    key={charIdx}
+                    char={char}
+                    progress={scrollYProgress}
+                    range={[start, end]}
+                  />
+                );
+              })}
+            </span>
+            {wordIndex < words.length - 1 && (
+              <span className="inline-block">&nbsp;</span>
+            )}
+          </React.Fragment>
         );
       })}
     </p>

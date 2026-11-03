@@ -4,15 +4,14 @@ import { AnimatedText } from '../common/AnimatedText';
 import { ContactButton } from '../common/ContactButton';
 
 export const AboutSection: React.FC = () => {
-  const bioText = "Lead Cloud Architect and Full-Stack Engineer with over a decade of experience across distributed systems, cloud infrastructure, AI agents, and web applications. I focus on high-throughput architecture, resilient engineering, and modern interactive experiences that help teams build and scale extraordinary products. Let's build something incredible together!";
+  const bioText = "With more than five years of experience in design and engineering, I focus on distributed systems, cloud architecture, and modern user experiences. I truly enjoy working with teams and businesses that aim to stand out and present their best image. Let's build something incredible together!";
 
   return (
     <section
       id="about"
-      className="relative min-h-screen w-full bg-[#0C0C0C] flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-20 overflow-hidden"
+      className="relative min-h-screen w-full bg-[#0C0C0C] flex flex-col items-center justify-center px-6 sm:px-10 md:px-12 py-24 sm:py-32 overflow-hidden"
     >
       {/* 4 Decorative 3D images in corners */}
-      {/* 1. Top-left: Moon icon */}
       <div className="absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[120px] sm:w-[160px] md:w-[210px] pointer-events-none z-0">
         <FadeIn delay={0.1} x={-80} y={0} duration={0.9}>
           <img
@@ -24,7 +23,6 @@ export const AboutSection: React.FC = () => {
         </FadeIn>
       </div>
 
-      {/* 2. Bottom-left: 3D Object */}
       <div className="absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[100px] sm:w-[140px] md:w-[180px] pointer-events-none z-0">
         <FadeIn delay={0.25} x={-80} y={0} duration={0.9}>
           <img
@@ -36,7 +34,6 @@ export const AboutSection: React.FC = () => {
         </FadeIn>
       </div>
 
-      {/* 3. Top-right: Lego icon */}
       <div className="absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[120px] sm:w-[160px] md:w-[210px] pointer-events-none z-0">
         <FadeIn delay={0.15} x={80} y={0} duration={0.9}>
           <img
@@ -48,7 +45,6 @@ export const AboutSection: React.FC = () => {
         </FadeIn>
       </div>
 
-      {/* 4. Bottom-right: 3D Group */}
       <div className="absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] w-[130px] sm:w-[170px] md:w-[220px] pointer-events-none z-0">
         <FadeIn delay={0.3} x={80} y={0} duration={0.9}>
           <img
@@ -61,7 +57,7 @@ export const AboutSection: React.FC = () => {
       </div>
 
       {/* Central content container */}
-      <div className="relative z-10 flex flex-col items-center max-w-4xl text-center">
+      <div className="relative z-10 flex flex-col items-center max-w-3xl text-center w-full">
         {/* Heading */}
         <FadeIn delay={0} y={40} className="w-full">
           <h2
@@ -72,22 +68,27 @@ export const AboutSection: React.FC = () => {
           </h2>
         </FadeIn>
 
-        {/* Gap between heading and text: gap-10 sm:gap-14 md:gap-16 */}
-        <div className="h-10 sm:h-14 md:h-16" />
+        {/* Spacing between heading and text */}
+        <div className="h-10 sm:h-14 md:h-16 w-full" />
 
-        {/* Character-by-character animated paragraph */}
-        <AnimatedText
-          text={bioText}
-          className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
-          style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' } as React.CSSProperties}
-        />
+        {/* Character-by-character animated paragraph with fixed spacing */}
+        <div className="w-full max-w-[620px] px-2 sm:px-4">
+          <AnimatedText
+            text={bioText}
+            className="text-[#D7E2EA] font-normal sm:font-medium text-center tracking-normal sm:tracking-wide"
+            style={{
+              fontSize: 'clamp(1rem, 2vw, 1.35rem)',
+              lineHeight: '1.9',
+            }}
+          />
+        </div>
 
-        {/* Gap between text block and button: gap-16 sm:gap-20 md:gap-24 */}
-        <div className="h-16 sm:h-20 md:h-24" />
+        {/* Spacing between text block and button */}
+        <div className="h-14 sm:h-18 md:h-20 w-full" />
 
         {/* Contact button */}
         <FadeIn delay={0.2} y={20}>
-          <ContactButton href="#contact" />
+          <ContactButton href="mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop" />
         </FadeIn>
       </div>
     </section>

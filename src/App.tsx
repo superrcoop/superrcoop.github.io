@@ -35,10 +35,10 @@ export const App: React.FC = () => {
       >
         <div className="flex flex-col items-center md:items-start gap-2">
           <span className="font-black text-2xl tracking-wider uppercase text-[#D7E2EA]">
-            Jordan Cooper
+            superrcoop
           </span>
           <p className="text-sm text-[#D7E2EA]/60 tracking-wide uppercase">
-            Lead Cloud Architect & Creative Systems Engineer • superrcoop.net
+            Lead Cloud Architect & 3D Creator • superrcoop.net
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export const App: React.FC = () => {
             <Globe className="w-6 h-6" />
           </a>
           <a
-            href="mailto:jordan@superrcoop.net"
+            href="mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop"
             aria-label="Send Email"
             className="text-[#D7E2EA]/70 hover:text-white transition-colors duration-200"
           >
@@ -71,7 +71,7 @@ export const App: React.FC = () => {
         </div>
 
         <div>
-          <ContactButton href="mailto:jordan@superrcoop.net" />
+          <ContactButton href="mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop" />
         </div>
       </footer>
     </div>

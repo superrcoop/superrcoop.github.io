@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
             Projects
           </a>
           <a
-            href="mailto:jordan@superrcoop.net"
+            href="mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop"
             className="transition-opacity duration-200 hover:opacity-70"
           >
             Contact
@@ -37,15 +37,15 @@ export const HeroSection: React.FC = () => {
         </nav>
       </FadeIn>
 
-      {/* 2. Hero Heading */}
+      {/* 2. Hero Heading: Hi, i'm superrcoop */}
       <div className="w-full overflow-hidden text-center z-0 mt-6 sm:mt-4 md:-mt-5">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-          className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw] select-none"
+          className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11vw] sm:text-[12.5vw] md:text-[13.5vw] lg:text-[14.5vw] select-none"
         >
-          Hi, i&apos;m jordan
+          Hi, i&apos;m superrcoop
         </motion.h1>
       </div>
 
@@ -62,7 +62,7 @@ export const HeroSection: React.FC = () => {
             <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] max-h-[70vh] rounded-3xl overflow-hidden border border-[#D7E2EA]/20 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-sm bg-gradient-to-b from-[#18011F]/40 via-[#0C0C0C]/60 to-[#0C0C0C]">
               <img
                 src="/me.jpg"
-                alt="Jordan Cooper"
+                alt="superrcoop"
                 onError={(e) => {
                   const target = e.currentTarget;
                   if (target.src !== 'https://avatars.githubusercontent.com/u/17491604?v=4') {
@@ -72,7 +72,6 @@ export const HeroSection: React.FC = () => {
                 className="w-full h-full object-cover object-center filter contrast-105 brightness-95 group-hover:scale-105 transition-transform duration-500 ease-out"
                 draggable={false}
               />
-              {/* Subtle ambient lighting vignette */}
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0C0C0C] via-transparent to-transparent opacity-80" />
               <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
             </div>
@@ -94,7 +93,7 @@ export const HeroSection: React.FC = () => {
 
         {/* Right Contact button */}
         <FadeIn delay={0.5} y={20}>
-          <ContactButton href="#contact" />
+          <ContactButton href="mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop" />
         </FadeIn>
       </div>
     </section>

@@ -6,7 +6,7 @@ interface ContactButtonProps {
 }
 
 export const ContactButton: React.FC<ContactButtonProps> = ({
-  href = "mailto:jordan@superrcoop.net?subject=Let's%20Build%20Something%20Together",
+  href = "mailto:fact-clogs.2e@icloud.com?subject=Portfolio%20Inquiry%20via%20superrcoop",
   className = "",
 }) => {
   return (
